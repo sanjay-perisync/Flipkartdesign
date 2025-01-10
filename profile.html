@@ -1,0 +1,1718 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="m-0 p-0 box-border bg-slate-100">
+    <!-- maincontainer -->
+    <div class=" w-full h-full flex flex-col">
+
+        <!-- Navbar Container -->
+        <nav class="w-full bg-blue-500 sticky top-0 left-0 z-50 text-white font-semibold">
+            <!--  Navbar Content -->
+            <div class="flex items-center justify-between md:justify-center gap-10 px-4 py-3">
+
+
+                <!-- Hamburger Menu -->
+                <button class="lg:hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <a href="index.html" target="_blank"><img src="img/fliplogo.png" alt="Logo" class="w-24 h-8 object-contain"></a>
+                </div>
+
+                <!-- Search Bar -->
+                <div class="hidden md:flex items-center w-[700px] rounded-md">
+
+                    <input type="text" placeholder="Search for products, brands and more"
+                        class="w-full px-4 py-2 rounded-sm focus:outline-none border border-gray-300">
+                    <!-- <button class="bg-white px-3 rounded-r-md border-l-0 border border-gray-300 h-10">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-500" fill="none" 
+            viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+        </svg>
+ </button> -->
+                </div>
+
+
+
+                <div class="hidden lg:flex items-center gap-8">
+
+
+
+                    <!-- login -->
+                    <div class="relative group" id="userDropdown">
+                        <button class="flex items-center gap-1 cursor-pointer">
+
+                            <span>Sanjay</span>
+
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                class="h-3 w-3 mt-1 transition-transform duration-200 group-hover:rotate-180" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor" id="dropdownArrow">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+
+                        <!-- Submenu -->
+                        <div id="exploreSubmenu"
+                            class="invisible group-hover:visible opacity-0 group-hover:opacity-100 absolute left-1/2 transform -translate-x-1/2 mt-2 w-56 bg-white rounded-md shadow-lg  z-50 duration-300">
+                            <div class="flex flex-col">
+                                <a href="#"
+                                    class="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-blue-600 flex items-center gap-3">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+                                        <circle cx="12" cy="7" r="4" />
+                                    </svg>
+                                    My Profile
+                                </a>
+                                <div class="border-t border-gray-200"></div>
+
+
+
+
+                                <a href="#"
+                                    class="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-blue-600 flex items-center gap-3">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <circle cx="12" cy="12" r="8" />
+                                        <path d="M12 2v7.5" />
+                                        <path d="m19 5-5.23 5.23" />
+                                    </svg>
+                                    SuperCoin Zone
+                                </a>
+                                <div class="border-t border-gray-200"></div>
+
+
+
+                                <a href="#"
+                                    class="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-blue-600 flex items-center gap-3">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="M6 12h12" />
+                                        <path d="M12 18V6" />
+                                        <circle cx="12" cy="12" r="10" />
+                                    </svg>
+                                    Flipkart plus zone
+                                </a>
+                                <div class="border-t border-gray-200"></div>
+
+
+
+
+                                <a href="#"
+                                    class="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-blue-600 flex items-center gap-3">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z" />
+                                        <path d="M3 6h18" />
+                                        <path d="M16 10a4 4 0 0 1-8 0" />
+                                    </svg>
+                                    Orders
+                                </a>
+                                <div class="border-t border-gray-200"></div>
+
+
+
+
+                                <a href="#"
+                                    class="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-blue-600 flex items-center gap-3">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path
+                                            d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+                                    </svg>
+                                    Wishlist
+                                </a>
+                                <div class="border-t border-gray-200"></div>
+
+
+
+                                <a href="#"
+                                    class="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-blue-600 flex items-center gap-3">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="M4 8h16" />
+                                        <rect width="20" height="12" x="2" y="8" rx="2" />
+                                        <path d="M8 12h8" />
+                                    </svg>
+                                    Coupons
+                                </a>
+                                <div class="border-t border-gray-200"></div>
+
+
+                                <a href="#"
+                                    class="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-blue-600 flex items-center gap-3">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <rect width="20" height="14" x="2" y="5" rx="2" />
+                                        <path d="M22 5-8.13 14.14" />
+                                        <path d="M19 5 6.19 14.14" />
+                                        <path d="M22 8.07l-6.54 6.07" />
+                                        <path d="m2 16.07 6.54-6.07" />
+                                    </svg>
+                                    Gift Cards
+                                </a>
+                                <div class="border-t border-gray-200"></div>
+
+
+                                <a href="#"
+                                    class="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-blue-600 flex items-center gap-3">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9" />
+                                        <path d="M10.3 21a1.94 1.94 0 0 0 3.4 0" />
+                                    </svg>
+                                    Notification
+                                </a>
+                                <div class="border-t border-gray-200"></div>
+
+
+                                <a href="#"
+                                    class="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-blue-600 flex items-center gap-3">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
+                                        <polyline points="16 17 21 12 16 7" />
+                                        <line x1="21" y1="12" x2="9" y2="12" />
+                                    </svg>
+                                    Logout
+                                </a>
+                                <div class="border-t border-gray-200"></div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+
+                    <!-- Become a Seller -->
+                    <div class="flex items-center gap-1 cursor-pointer">
+
+                        <span>Become a Seller</span>
+                    </div>
+
+                    <!-- More Options -->
+                    <div class="relative group">
+                        <button class="flex items-center gap-1 cursor-pointer">
+
+                            <span>More</span>
+
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                class="h-3 w-3 mt-1 transition-transform duration-200 group-hover:rotate-180" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor" id="dropdownArrow">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+
+                        <div
+                            class="invisible group-hover:visible opacity-0 group-hover:opacity-100 absolute left-1/2 transform -translate-x-1/2 mt-2 w-56 bg-white rounded-md shadow-lg z-50 duration-300">
+                            <div class="flex flex-col">
+
+                                <a href="#"
+                                    class="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-blue-600 flex items-center gap-3">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9" />
+                                        <path d="M10.3 21a1.94 1.94 0 0 0 3.4 0" />
+                                    </svg>
+                                    Notification Preferences
+                                </a>
+                                <div class="border-t border-gray-200"></div>
+
+                                <a href="#"
+                                    class="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-blue-600 flex items-center gap-3">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+                                        <circle cx="12" cy="7" r="4" />
+                                    </svg>
+                                    24 X 7 Customer Care
+                                </a>
+                                <div class="border-t border-gray-200"></div>
+
+                                <a href="#"
+                                    class="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-blue-600 flex items-center gap-3">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <circle cx="12" cy="12" r="8" />
+                                        <path d="M12 2v7.5" />
+                                        <path d="m19 5-5.23 5.23" />
+                                    </svg>
+                                    Advertise
+                                </a>
+                                <div class="border-t border-gray-200"></div>
+
+                                <a href="#"
+                                    class="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-blue-600 flex items-center gap-3">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                                        <polyline points="7 10 12 15 17 10" />
+                                        <line x1="12" y1="15" x2="12" y2="3" />
+                                    </svg>
+                                    Download App
+                                </a>
+
+
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Cart -->
+                    <div class="flex items-center gap-1 cursor-pointer ">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                        </svg>
+                        <span>Cart</span>
+                    </div>
+
+                </div>
+
+                <!-- Mobile Icons -->
+                <div class="flex lg:hidden items-center gap-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                    </svg>
+                </div>
+            </div>
+
+
+        </nav>
+
+
+
+
+
+
+        <!-- categories -->
+
+        <div class="lg:flex justify-around hidden shadow-md bg-white px-32 py-3">
+
+            <!-- footwear Options -->
+            <div class="relative group">
+                <button class="flex items-center gap-1 cursor-pointer hover:text-blue-600">
+
+                    <span class="font-medium text-sm">Footwears</span>
+
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                        class="h-3 w-3 mt-1 transition-transform duration-200 group-hover:rotate-180 " fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor" id="dropdownArrow">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </button>
+
+                <div
+                    class="invisible group-hover:visible opacity-0 group-hover:opacity-100 absolute left-1/2 transform -translate-x-1/2 mt-2 w-56 bg-white rounded-md shadow-lg z-50 duration-300">
+                    <div class="flex flex-col">
+
+                        <a href="#"
+                            class="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-blue-600 flex items-center gap-3">
+
+                            Sports Shoes
+                        </a>
+
+
+                        <a href="#"
+                            class="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-blue-600 flex items-center gap-3">
+
+                            Casual shoes
+                        </a>
+
+
+                        <a href="#"
+                            class="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-blue-600 flex items-center gap-3">
+
+                            Formal shoes
+                        </a>
+
+
+                        <a href="#"
+                            class="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-blue-600 flex items-center gap-3">
+
+                            Crocs
+                        </a>
+
+
+                        <a href="#"
+                            class="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-blue-600 flex items-center gap-3">
+
+                            Sneakers
+                        </a>
+
+
+                        <a href="#"
+                            class="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-blue-600 flex items-center gap-3">
+
+                            Sandals
+                        </a>
+
+
+                        <a href="#"
+                            class="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-blue-600 flex items-center gap-3">
+
+                            Sports Shoes
+                        </a>
+
+
+                        <a href="#"
+                            class="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-blue-600 flex items-center gap-3">
+
+                            Casual shoes
+                        </a>
+
+
+                        <a href="#"
+                            class="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-blue-600 flex items-center gap-3">
+
+                            Formal shoes
+                        </a>
+
+
+                        <a href="#"
+                            class="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-blue-600 flex items-center gap-3">
+
+                            Crocs
+                        </a>
+
+
+                        <a href="#"
+                            class="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-blue-600 flex items-center gap-3">
+
+                            Sneakers
+                        </a>
+
+
+                        <a href="#"
+                            class="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-blue-600 flex items-center gap-3">
+
+                            Sandals
+                        </a>
+
+
+                    </div>
+                </div>
+
+            </div>
+
+
+
+            <!-- footwear Options -->
+            <div class="relative group">
+                <button class="flex items-center gap-1 cursor-pointer hover:text-blue-600">
+
+                    <span class="font-medium text-sm">TV's and Appliances</span>
+
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                        class="h-3 w-3 mt-1 transition-transform duration-200 group-hover:rotate-180" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor" id="dropdownArrow">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </button>
+
+                <div
+                    class="invisible group-hover:visible opacity-0 group-hover:opacity-100 absolute left-1/2 transform -translate-x-1/2 mt-2 w-56 bg-white rounded-md shadow-lg z-50 duration-300">
+                    <div class="flex flex-col">
+
+                        <a href="#"
+                            class="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-blue-600 flex items-center gap-3">
+
+                            Sony
+                        </a>
+
+
+                        <a href="#"
+                            class="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-blue-600 flex items-center gap-3">
+
+                            Samsung
+                        </a>
+
+
+                        <a href="#"
+                            class="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-blue-600 flex items-center gap-3">
+
+                            LG
+                        </a>
+
+
+                        <a href="#"
+                            class="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-blue-600 flex items-center gap-3">
+
+                            REDMI
+                        </a>
+
+
+                        <a href="#"
+                            class="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-blue-600 flex items-center gap-3">
+
+                            Vivo
+                        </a>
+
+
+                        <a href="#"
+                            class="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-blue-600 flex items-center gap-3">
+
+                            BPL
+                        </a>
+
+
+                        <a href="#"
+                            class="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-blue-600 flex items-center gap-3">
+
+                            Sony
+                        </a>
+
+
+                        <a href="#"
+                            class="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-blue-600 flex items-center gap-3">
+
+                            Samsung
+                        </a>
+
+
+                        <a href="#"
+                            class="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-blue-600 flex items-center gap-3">
+
+                            LG
+                        </a>
+
+
+                        <a href="#"
+                            class="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-blue-600 flex items-center gap-3">
+
+                            REDMI
+                        </a>
+
+
+                        <a href="#"
+                            class="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-blue-600 flex items-center gap-3">
+
+                            Vivo
+                        </a>
+
+
+                        <a href="#"
+                            class="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-blue-600 flex items-center gap-3">
+
+                            BPL
+                        </a>
+
+
+
+                    </div>
+                </div>
+
+            </div>
+
+
+
+
+
+            <!-- footwear Options -->
+            <div class="relative group">
+                <button class="flex items-center gap-1 cursor-pointer hover:text-blue-600">
+
+                    <span class="font-medium text-sm">Men's</span>
+
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                        class="h-3 w-3 mt-1 transition-transform duration-200 group-hover:rotate-180" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor" id="dropdownArrow">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </button>
+
+                <div
+                    class="invisible group-hover:visible opacity-0 group-hover:opacity-100 absolute left-1/2 transform -translate-x-1/2 mt-2 w-56 bg-white rounded-md shadow-lg z-50 duration-300">
+                    <div class="flex flex-col">
+
+                        <a href="#"
+                            class="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-blue-600 flex items-center gap-3">
+
+                            Shirts
+                        </a>
+
+
+                        <a href="#"
+                            class="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-blue-600 flex items-center gap-3">
+
+                            Trousers
+                        </a>
+
+
+                        <a href="#"
+                            class="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-blue-600 flex items-center gap-3">
+
+                            Jackets
+                        </a>
+
+
+                        <a href="#"
+                            class="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-blue-600 flex items-center gap-3">
+
+                            Shades
+                        </a>
+
+
+                        <a href="#"
+                            class="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-blue-600 flex items-center gap-3">
+
+                            Blazzers
+                        </a>
+
+
+                        <a href="#"
+                            class="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-blue-600 flex items-center gap-3">
+
+                            Watches
+                        </a>
+
+
+                        <a href="#"
+                            class="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-blue-600 flex items-center gap-3">
+
+                            Shirts
+                        </a>
+
+
+                        <a href="#"
+                            class="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-blue-600 flex items-center gap-3">
+
+                            Trousers
+                        </a>
+
+
+                        <a href="#"
+                            class="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-blue-600 flex items-center gap-3">
+
+                            Jackets
+                        </a>
+
+
+                        <a href="#"
+                            class="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-blue-600 flex items-center gap-3">
+
+                            Shades
+                        </a>
+
+
+                        <a href="#"
+                            class="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-blue-600 flex items-center gap-3">
+
+                            Blazzers
+                        </a>
+
+
+                        <a href="#"
+                            class="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-blue-600 flex items-center gap-3">
+
+                            Watches
+                        </a>
+
+
+
+                    </div>
+                </div>
+
+            </div>
+
+
+
+
+            <!-- footwear Options -->
+            <div class="relative group">
+                <button class="flex items-center gap-1 cursor-pointer hover:text-blue-600">
+
+                    <span class="font-medium text-sm">Woman</span>
+
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                        class="h-3 w-3 mt-1 transition-transform duration-200 group-hover:rotate-180" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor" id="dropdownArrow">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </button>
+
+                <div
+                    class="invisible group-hover:visible opacity-0 group-hover:opacity-100 absolute left-1/2 transform -translate-x-1/2 mt-2 w-56 bg-white rounded-md shadow-lg z-50 duration-300">
+                    <div class="flex flex-col">
+
+                        <a href="#"
+                            class="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-blue-600 flex items-center gap-3">
+
+                            Shirts
+                        </a>
+
+
+                        <a href="#"
+                            class="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-blue-600 flex items-center gap-3">
+
+                            Trousers
+                        </a>
+
+
+                        <a href="#"
+                            class="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-blue-600 flex items-center gap-3">
+
+                            Jackets
+                        </a>
+
+
+                        <a href="#"
+                            class="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-blue-600 flex items-center gap-3">
+
+                            Shades
+                        </a>
+
+
+                        <a href="#"
+                            class="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-blue-600 flex items-center gap-3">
+
+                            Blazzers
+                        </a>
+
+
+                        <a href="#"
+                            class="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-blue-600 flex items-center gap-3">
+
+                            Watches
+                        </a>
+
+
+                        <a href="#"
+                            class="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-blue-600 flex items-center gap-3">
+
+                            Shirts
+                        </a>
+
+
+                        <a href="#"
+                            class="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-blue-600 flex items-center gap-3">
+
+                            Trousers
+                        </a>
+
+
+                        <a href="#"
+                            class="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-blue-600 flex items-center gap-3">
+
+                            Jackets
+                        </a>
+
+
+                        <a href="#"
+                            class="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-blue-600 flex items-center gap-3">
+
+                            Shades
+                        </a>
+
+
+                        <a href="#"
+                            class="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-blue-600 flex items-center gap-3">
+
+                            Blazzers
+                        </a>
+
+
+                        <a href="#"
+                            class="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-blue-600 flex items-center gap-3">
+
+                            Watches
+                        </a>
+
+
+                    </div>
+                </div>
+
+            </div>
+
+
+
+
+            <!-- footwear Options -->
+            <div class="relative group ">
+                <button class="flex items-center gap-1 cursor-pointer hover:text-blue-600">
+
+                    <span class="font-medium text-sm">Baby & Kids</span>
+
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                        class="h-3 w-3 mt-1 transition-transform duration-200 group-hover:rotate-180" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor" id="dropdownArrow">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </button>
+
+                <div
+                    class="invisible group-hover:visible opacity-0 group-hover:opacity-100 absolute left-1/2 transform -translate-x-1/2 mt-2 w-56 bg-white rounded-md shadow-lg z-50 duration-300">
+                    <div class="flex flex-col">
+
+                        <a href="#"
+                            class="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-blue-600 flex items-center gap-3">
+
+                            Toys
+                        </a>
+
+
+                        <a href="#"
+                            class="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-blue-600 flex items-center gap-3">
+
+                            Chocos
+                        </a>
+
+
+                        <a href="#"
+                            class="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-blue-600 flex items-center gap-3">
+
+                            Games
+                        </a>
+
+
+                        <a href="#"
+                            class="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-blue-600 flex items-center gap-3">
+
+                            Stickers
+                        </a>
+
+
+                        <a href="#"
+                            class="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-blue-600 flex items-center gap-3">
+
+                            Slippers
+                        </a>
+
+
+                        <a href="#"
+                            class="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-blue-600 flex items-center gap-3">
+
+                            Froks
+                        </a>
+
+                        <a href="#"
+                            class="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-blue-600 flex items-center gap-3">
+
+                            Toys
+                        </a>
+
+
+                        <a href="#"
+                            class="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-blue-600 flex items-center gap-3">
+
+                            Chocos
+                        </a>
+
+
+                        <a href="#"
+                            class="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-blue-600 flex items-center gap-3">
+
+                            Games
+                        </a>
+
+
+                        <a href="#"
+                            class="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-blue-600 flex items-center gap-3">
+
+                            Stickers
+                        </a>
+
+
+                        <a href="#"
+                            class="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-blue-600 flex items-center gap-3">
+
+                            Slippers
+                        </a>
+
+
+                        <a href="#"
+                            class="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-blue-600 flex items-center gap-3">
+
+                            Froks
+                        </a>
+
+
+                    </div>
+                </div>
+
+            </div>
+
+
+
+
+            <!-- footwear Options -->
+            <div class="relative group">
+                <button class="flex items-center gap-1 cursor-pointer hover:text-blue-600">
+
+                    <span class="font-medium text-sm">Homes and Furnitures</span>
+
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                        class="h-3 w-3 mt-1 transition-transform duration-200 group-hover:rotate-180" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor" id="dropdownArrow">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </button>
+
+                <div
+                    class="invisible group-hover:visible opacity-0 group-hover:opacity-100 absolute left-1/2 transform -translate-x-1/2 mt-2 w-56 bg-white rounded-md shadow-lg z-50 duration-300">
+                    <div class="flex flex-col">
+
+                        <a href="#"
+                            class="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-blue-600 flex items-center gap-3">
+
+                            Couch
+                        </a>
+
+
+                        <a href="#"
+                            class="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-blue-600 flex items-center gap-3">
+
+                            Bed
+                        </a>
+
+
+                        <a href="#"
+                            class="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-blue-600 flex items-center gap-3">
+
+                            Pillows
+                        </a>
+
+
+                        <a href="#"
+                            class="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-blue-600 flex items-center gap-3">
+
+                            Curtons
+                        </a>
+
+
+                        <a href="#"
+                            class="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-blue-600 flex items-center gap-3">
+
+                            Fans
+                        </a>
+
+
+                        <a href="#"
+                            class="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-blue-600 flex items-center gap-3">
+
+                            Lights
+                        </a>
+
+
+                        <a href="#"
+                            class="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-blue-600 flex items-center gap-3">
+
+                            Couch
+                        </a>
+
+
+                        <a href="#"
+                            class="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-blue-600 flex items-center gap-3">
+
+                            Bed
+                        </a>
+
+
+                        <a href="#"
+                            class="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-blue-600 flex items-center gap-3">
+
+                            Pillows
+                        </a>
+
+
+                        <a href="#"
+                            class="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-blue-600 flex items-center gap-3">
+
+                            Curtons
+                        </a>
+
+
+                        <a href="#"
+                            class="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-blue-600 flex items-center gap-3">
+
+                            Fans
+                        </a>
+
+
+                        <a href="#"
+                            class="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-blue-600 flex items-center gap-3">
+
+                            Lights
+                        </a>
+
+
+
+                    </div>
+                </div>
+
+            </div>
+
+
+
+            <!-- footwear Options -->
+            <div class="relative group">
+                <button class="flex items-center gap-1 cursor-pointer hover:text-blue-600">
+
+                    <span class="font-medium text-sm ">Sports Books and More</span>
+
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                        class="h-3 w-3 mt-1 transition-transform duration-200 group-hover:rotate-180" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor" id="dropdownArrow">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </button>
+
+                <div
+                    class="invisible group-hover:visible opacity-0 group-hover:opacity-100 absolute left-1/2 transform -translate-x-1/2 mt-2 w-56 bg-white rounded-md shadow-lg z-50 duration-300">
+                    <div class="flex flex-col">
+
+                        <a href="#"
+                            class="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-blue-600 flex items-center gap-3">
+
+                            Bat's
+                        </a>
+
+
+                        <a href="#"
+                            class="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-blue-600 flex items-center gap-3">
+
+                            Football
+                        </a>
+
+
+                        <a href="#"
+                            class="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-blue-600 flex items-center gap-3">
+
+                            Ropes
+                        </a>
+
+
+                        <a href="#"
+                            class="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-blue-600 flex items-center gap-3">
+
+                            Balls
+                        </a>
+
+
+                        <a href="#"
+                            class="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-blue-600 flex items-center gap-3">
+
+                            Stumps
+                        </a>
+
+
+                        <a href="#"
+                            class="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-blue-600 flex items-center gap-3">
+
+                            Fictional Books
+                        </a>
+
+
+                        
+                        <a href="#"
+                            class="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-blue-600 flex items-center gap-3">
+
+                            Bat's
+                        </a>
+
+
+                        <a href="#"
+                            class="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-blue-600 flex items-center gap-3">
+
+                            Football
+                        </a>
+
+
+                        <a href="#"
+                            class="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-blue-600 flex items-center gap-3">
+
+                            Ropes
+                        </a>
+
+
+                        <a href="#"
+                            class="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-blue-600 flex items-center gap-3">
+
+                            Balls
+                        </a>
+
+
+                        <a href="#"
+                            class="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-blue-600 flex items-center gap-3">
+
+                            Stumps
+                        </a>
+
+
+                        <a href="#"
+                            class="px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-blue-600 flex items-center gap-3">
+
+                            Fictional Books
+                        </a>
+
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="flex items-center gap-1 cursor-pointer group hover:text-blue-600">
+                <span class="font-medium text-sm">Flights</span>
+
+            </div>
+
+
+
+            <div class="flex items-center gap-1 cursor-pointer group hover:text-blue-600">
+                <span class="font-medium text-sm">Offer Zones</span>
+                <button>
+
+                </button>
+            </div>
+
+
+
+
+
+
+        </div>
+        <!-- categories ends here-->
+
+
+
+        <!-- body content starts here -->
+        <div class="flex justify-center gap-5 mx-4 sm:mx-28 my-3 sm:my-5">
+
+
+
+            <!-- leftsidebar starts -->
+            <div class="flex flex-col mt-5 gap-5 w-full md:w-64">
+
+                <!-- Profile Card -->
+                <div class="flex items-center gap-2 px-5 py-4 bg-white shadow-md rounded-lg">
+                    <div class="shrink-0">
+                        <img src="img/profileimage.png" alt="Profile" class="h-16 w-16 rounded-full">
+                    </div>
+                    <div class="flex flex-col gap-1">
+                        <p class="text-gray-600">Hello,</p>
+                        <p class="font-medium text-gray-800">Sanjay</p>
+                    </div>
+                </div>
+
+
+                <div class="bg-white shadow-md rounded-lg divide-y divide-gray-100">
+                    <!-- My Orders -->
+                    <div class="p-4">
+                        <div class="flex items-center justify-between cursor-pointer group">
+                            <div class="flex items-center gap-3">
+                                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIxOCIgdmlld0JveD0iMCAwIDI0IDE4Ij48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC04LjY5NCAtMTEpIj48ZWxsaXBzZSBjeD0iMjAuNTU3IiBjeT0iMjAiIHJ4PSIyMC41NTciIHJ5PSIyMCIvPjxwYXRoIGZpbGw9IiMyODc0RjEiIGQ9Ik05IDExdjE3LjEwOGMwIC40OTMuNDEuODkyLjkxOC44OTJoNC45M3YtNS4yNTdoLTMuMDMzbDQuOTEyLTQuNzcgNC45NzIgNC44M2gtMy4wMzVWMjloMTIuNDE3Yy41MDcgMCAuOTE4LS40LjkxOC0uODkyVjExSDl6Ii8+PC9nPjwvc3ZnPg=="
+                                    alt="Orders" class="w-6 h-6">
+                                <span class="group-hover:text-blue-600 font-medium text-gray-400">My Orders</span>
+                            </div>
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                class="h-4 w-4 transition-transform group-hover:rotate-180" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </div>
+                    </div>
+
+                    <!-- Account Settings -->
+                    <div class="p-4">
+                        <div class="flex items-center justify-between cursor-pointer group">
+                            <div class="flex items-center gap-3">
+                                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMiIgaGVpZ2h0PSIyMSIgdmlld0JveD0iMCAwIDIyIDIxIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC05LjY5NCAtMTApIj48cGF0aCBmaWxsPSIjMjg3NEYwIiBkPSJNMTQuMjc1IDIyLjcwNGMyLjI3Mi0uNDEyIDQuMzQ3LS42MTggNi4yMjUtLjYxOCAxLjg3OCAwIDMuOTUzLjIwNiA2LjIyNS42MThhNS4xNSA1LjE1IDAgMCAxIDQuMjMgNS4wNjhWMzFoLTIwLjkxdi0zLjIyOGE1LjE1IDUuMTUgMCAwIDEgNC4yMy01LjA2OHptMS4yNzQtNy43MjRjMC0yLjU4IDIuMTYzLTQuNjczIDQuODMyLTQuNjczIDIuNjY3IDAgNC44MyAyLjA5MiA0LjgzIDQuNjczIDAgMi41OC0yLjE2MyA0LjY3My00LjgzIDQuNjczLTIuNjcgMC00LjgzMy0yLjA5Mi00LjgzMy00LjY3M3oiLz48ZWxsaXBzZSBjeD0iMjAuNTU3IiBjeT0iMjAiIHJ4PSIyMC41NTciIHJ5PSIyMCIvPjwvZz48L3N2Zz4="
+                                    alt="Account" class="w-6 h-6">
+                                <span class="group-hover:text-blue-600 font-medium text-gray-400">Account Settings</span>
+                            </div>
+
+                        </div>
+                        <div class="mt-3 ml-9 space-y-2 text-gray-600">
+                            <p class="hover:text-blue-600 cursor-pointer">Profile Information</p>
+                            <p class="hover:text-blue-600 cursor-pointer">Manage Addresses</p>
+                            <p class="hover:text-blue-600 cursor-pointer">PAN Card Information</p>
+                        </div>
+                    </div>
+
+                    <!-- Payments -->
+                    <div class="p-4">
+                        <div class="flex items-center justify-between cursor-pointer group">
+                            <div class="flex items-center gap-3">
+                                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMyIgaGVpZ2h0PSIyMiIgdmlld0JveD0iMCAwIDIzIDIyIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC05LjY5NCAtOSkiPjxlbGxpcHNlIGN4PSIyMC41NTciIGN5PSIyMCIgcng9IjIwLjU1NyIgcnk9IjIwIi8+PHBhdGggZD0iTTcgNmgyOHYyOEg3eiIvPjxwYXRoIGZpbGw9IiMyODc0RjAiIGZpbGwtcnVsZT0ibm9uemVybyIgZD0iTTMxLjUgMjd2MS4xNjdhMi4zNCAyLjM0IDAgMCAxLTIuMzMzIDIuMzMzSDEyLjgzM2EyLjMzMyAyLjMzMyAwIDAgMS0yLjMzMy0yLjMzM1YxMS44MzNBMi4zMzMgMi4zMzMgMCAwIDEgMTIuODMzIDkuNWgxNi4zMzRhMi4zNCAyLjM0IDAgMCAxIDIuMzMzIDIuMzMzVjEzSDIxYTIuMzMzIDIuMzMzIDAgMCAwLTIuMzMzIDIuMzMzdjkuMzM0QTIuMzMzIDIuMzMzIDAgMCAwIDIxIDI3aDEwLjV6TTIxIDI0LjY2N2gxMS42Njd2LTkuMzM0SDIxdjkuMzM0em00LjY2Ny0yLjkxN2MtLjk3IDAtMS43NS0uNzgyLTEuNzUtMS43NXMuNzgtMS43NSAxLjc1LTEuNzVjLjk2OCAwIDEuNzUuNzgyIDEuNzUgMS43NXMtLjc4MiAxLjc1LTEuNzUgMS43NXoiLz48L2c+PC9zdmc+"
+                                    alt="Payments" class="w-6 h-6">
+                                <span class="group-hover:text-blue-600 font-medium text-gray-400">Payments</span>
+                            </div>
+
+                        </div>
+                        <div class="mt-3 ml-9 space-y-2 text-gray-600">
+                            <div class="gap-5 flex">
+                                <div>
+                                    <p class="hover:text-blue-600 cursor-pointer">Gift Cards</p>
+                                </div>
+                                <div><span class="text-green-700 font-semibold">₹ 0</span></div>
+                            </div>
+                            <p class="hover:text-blue-600 cursor-pointer">Saved UPI</p>
+                            <p class="hover:text-blue-600 cursor-pointer">Saved Cards</p>
+                        </div>
+                    </div>
+
+                    <!-- My Stuff -->
+                    <div class="p-4">
+                        <div class="flex items-center justify-between cursor-pointer group">
+                            <div class="flex items-center gap-3">
+                                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMyIgaGVpZ2h0PSIxOSIgdmlld0JveD0iMCAwIDIzIDE5Ij48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGZpbGw9IiMyODc0RjAiIGZpbGwtcnVsZT0ibm9uemVybyIgZD0iTTIwLjUgMi43NWgtOUw5LjI1LjVIMi41QTIuMjQ3IDIuMjQ3IDAgMCAwIC4yNiAyLjc1bC0uMDEgMTMuNUEyLjI1NyAyLjI1NyAwIDAgMCAyLjUgMTguNWgxOGEyLjI1NyAyLjI1NyAwIDAgMCAyLjI1LTIuMjVWNWEyLjI1NyAyLjI1NyAwIDAgMC0yLjI1LTIuMjV6bS01LjYyNSAzLjM3NWEyLjI1NyAyLjI1NyAwIDAgMSAyLjI1IDIuMjUgMi4yNTcgMi4yNTcgMCAwIDEtMi4yNSAyLjI1IDIuMjU3IDIuMjU3IDAgMCAxLTIuMjUtMi4yNSAyLjI1NyAyLjI1NyAwIDAgMSAyLjI1LTIuMjV6bTQuNSA5aC05VjE0YzAtMS40OTYgMy4wMDQtMi4yNSA0LjUtMi4yNXM0LjUuNzU0IDQuNSAyLjI1djEuMTI1eiIvPjxwYXRoIGQ9Ik0tMi00aDI3djI3SC0yeiIvPjwvZz48L3N2Zz4="
+                                    alt="My Stuff" class="w-6 h-6">
+                                <span class="group-hover:text-blue-600 font-medium text-gray-400">My Stuff</span>
+                            </div>
+
+                        </div>
+                        <div class="mt-3 ml-9 space-y-2 text-gray-600">
+                            <p class="hover:text-blue-600 cursor-pointer">My Coupons</p>
+                            <p class="hover:text-blue-600 cursor-pointer">My Reviews & Ratings</p>
+                            <p class="hover:text-blue-600 cursor-pointer">All Notifications</p>
+                            <p class="hover:text-blue-600 cursor-pointer">My Wishlist</p>
+                        </div>
+                    </div>
+
+
+
+
+                    <!-- Logout -->
+                    <div class="p-4">
+                        <div class="flex items-center justify-between cursor-pointer group">
+                            <div class="flex items-center gap-3">
+                                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIxOCIgdmlld0JveD0iMCAwIDI0IDE4Ij48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC04LjY5NCAtMTEpIj48ZWxsaXBzZSBjeD0iMjAuNTU3IiBjeT0iMjAiIHJ4PSIyMC41NTciIHJ5PSIyMCIvPjxwYXRoIGZpbGw9IiMyODc0RjEiIGQ9Ik05IDExdjE3LjEwOGMwIC40OTMuNDEuODkyLjkxOC44OTJoNC45M3YtNS4yNTdoLTMuMDMzbDQuOTEyLTQuNzcgNC45NzIgNC44M2gtMy4wMzVWMjloMTIuNDE3Yy41MDcgMCAuOTE4LS40LjkxOC0uODkyVjExSDl6Ii8+PC9nPjwvc3ZnPg=="
+                                    alt="Orders" class="w-6 h-6">
+                                <span class="group-hover:text-blue-600 font-medium text-gray-400">Log Out</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+
+                <div class="flex flex-col gap-3 bg-white shadow-md rounded-lg px-4 py-4">
+                    <div>
+                        <span class="font-semibold">Frequently Visited:</span>
+                    </div>
+
+                    <div class="flex gap-4 text-gray-400">
+                        <a href="">Track Order</a>
+                        <a href="">Help Center</a>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+      <!-- Right Content -->
+<div class="bg-white shadow-md rounded-lg mt-5  hidden sm:block">
+    <div class="flex flex-col gap-14 py-5 px-10">
+        <div class="flex flex-col gap-5 justify-between">
+            <!-- Header -->
+            <div class="flex gap-6 mb-6">
+                <h2 class="text-xl font-semibold text-gray-800">Personal Information</h2>
+                <button id="editButton" class="text-blue-600 hover:text-blue-700 font-medium">
+                    Edit
+                </button>
+            </div>
+        
+            <!-- Form -->
+            <form id="personalForm">
+                <!-- Name Fields -->
+                <div class="flex gap-4">
+                    <div>
+                        <input
+                            type="text"
+                            id="firstName"
+                            placeholder="First Name"
+                            class="px-4 py-2 border border-gray-300 rounded-md bg-gray-50 disabled:bg-gray-100"
+                            disabled
+                        />
+                    </div>
+                    <div>
+                        <input
+                            type="text"
+                            id="lastName"
+                            placeholder="Last Name"
+                            class="px-4 py-2 border border-gray-300 rounded-md bg-gray-50 disabled:bg-gray-100"
+                            disabled
+                        />
+                    </div>
+                </div>
+        
+                <!-- Gender Selection -->
+                <div class="mb-6 mt-5">
+                    <p class="text-gray-700 mb-2">Your Gender</p>
+                    <div class="space-x-6">
+                        <label class="inline-flex items-center">
+                            <input
+                                type="radio"
+                                name="gender"
+                                value="Male"
+                                class="form-radio text-blue-600"
+                                disabled
+                            />
+                            <span class="ml-2">Male</span>
+                        </label>
+                        <label class="inline-flex items-center">
+                            <input
+                                type="radio"
+                                name="gender"
+                                value="Female"
+                                class="form-radio text-blue-600"
+                                disabled
+                            />
+                            <span class="ml-2">Female</span>
+                        </label>
+                    </div>
+                </div>
+        
+                <!-- Save Button -->
+                <button
+      type="submit"
+      id="saveButton"
+      class="hidden px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-md hover:bg-blue-700 transition-colors"
+    >
+      Save Changes
+    </button>
+            </form>
+        </div>
+        <!-- Email Section -->
+<form id="emailForm">
+    <div class="flex gap-5">
+        <span class="font-semibold">Email Address</span>
+        <button type="button" class="text-blue-600 font-medium hover:cursor-pointer">Edit</button>
+      
+    </div>
+    <div>
+        <input type="email" id="emailInput" placeholder="Email Address" class="border border-slate-400 px-6 py-3 bg-gray-50" disabled>
+    </div>
+    <button
+      type="submit"
+      id="saveButton"
+      class="hidden mt-5 px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-md hover:bg-blue-700 transition-colors"
+    >
+      Save Changes
+    </button>
+</form>
+
+<!-- Mobile Section -->
+<form id="mobileForm">
+    <div class="flex gap-5">
+        <span class="font-semibold">Mobile Number</span>
+        <button type="button" class="text-blue-600 font-medium hover:cursor-pointer">Edit</button>
+        
+    </div>
+    <div>
+        <input type="number" placeholder="Mobile Number" class="border border-slate-400 px-6 py-3 bg-gray-50" disabled>
+    </div>
+    <button
+        type="submit"
+        id="saveButton"
+        class="hidden px-4 mt-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-md hover:bg-blue-700 transition-colors"
+      >
+        Save Changes
+      </button>
+</form>
+
+
+        <!-- FAQs Section -->
+        <div class="flex flex-col gap-5">
+            <h2 class="font-semibold">FAQs</h2>
+            <div class="flex flex-col gap-5">
+                <div class="space-y-2">
+                    <h4 class="font-semibold">What happens when I update my email address (or mobile number)?</h4>
+                    <p class="text-gray-600">Your login email id (or mobile number) changes, likewise. You'll receive all
+                        your account related communication on your updated email address (or mobile number).</p>
+                </div>
+                <div class="space-y-2">
+                    <h4 class="font-semibold">When will my Flipkart account be updated with the new email address (or
+                        mobile number)?</h4>
+                    <p class="text-gray-600">It happens as soon as you confirm the verification code sent to your email
+                        (or mobile) and save the changes.</p>
+                </div>
+                <div class="space-y-2">
+                    <h4 class="font-semibold">What happens to my existing Flipkart account when I update my email address
+                        (or mobile number)?</h4>
+                    <p class="text-gray-600">Your account remains fully functional. All your account related information
+                        remains intact.</p>
+                </div>
+                <div class="space-y-2">
+                    <h4 class="font-semibold">Does my Seller account get affected when I update my email address?</h4>
+                    <p class="text-gray-600">Flipkart has a 'single sign-on' policy. Any changes will reflect in your
+                        Seller account also.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Account Actions -->
+        <div class="space-y-4">
+            <div>
+                <button class="text-blue-600 font-medium hover:text-blue-700">Deactivate Account</button>
+            </div>
+            <div>
+                <button class="text-red-600 font-medium hover:text-red-700">Delete Account</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Image -->
+    <div>
+        <img src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/myProfileFooter_4e9fe2.png"
+            alt="Profile Footer" class="w-full h-auto">
+    </div>
+</div>
+
+        </div>
+        <!-- body content ends here -->
+
+
+
+
+
+
+
+        <div class="flex flex-col bg-slate-900">
+            <!-- Footer Top -->
+            <div class=" text-white  ">
+                <div class="flex flex-col lg:flex-row justify-between p-4">
+                    <!-- Left Section -->
+                    <div class="flex flex-col lg:flex-row gap-8 lg:border-r-2 border-slate-400 lg:pr-8 w-full lg:w-1/2">
+                        <!-- About Section -->
+                        <div class="hidden lg:flex flex-col gap-4">
+                            <h3 class="font-semibold">
+                                <a href="#" class="hover:text-slate-300">ABOUT</a>
+                            </h3>
+                            <nav>
+                                <ul class="space-y-2">
+                                    <li><a href="#" class="hover:text-slate-300">Contact Us</a></li>
+                                    <li><a href="#" class="hover:text-slate-300">About Us</a></li>
+                                    <li><a href="#" class="hover:text-slate-300">Careers</a></li>
+                                    <li><a href="#" class="hover:text-slate-300">Flipkart Stories</a></li>
+                                    <li><a href="#" class="hover:text-slate-300">Press</a></li>
+                                    <li><a href="#" class="hover:text-slate-300">Corporate Information</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+
+                        <!-- Group Companies Section -->
+                        <div class="hidden lg:flex  flex-col gap-4">
+                            <h3 class="font-semibold">
+                                <a href="#" class="hover:text-slate-300">GROUP COMPANIES</a>
+                            </h3>
+                            <nav>
+                                <ul class="space-y-2">
+                                    <li><a href="#" class="hover:text-slate-300">Contact Us</a></li>
+                                    <li><a href="#" class="hover:text-slate-300">About Us</a></li>
+                                    <li><a href="#" class="hover:text-slate-300">Careers</a></li>
+                                    <li><a href="#" class="hover:text-slate-300">Flipkart Stories</a></li>
+                                    <li><a href="#" class="hover:text-slate-300">Press</a></li>
+                                    <li><a href="#" class="hover:text-slate-300">Corporate Information</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+
+                        <!-- Help Section - Hidden on small screens, shown in accordion -->
+                        <div class="hidden lg:flex flex-col gap-4">
+                            <h3 class="font-semibold">
+                                <a href="#" class="hover:text-slate-300">HELP</a>
+                            </h3>
+                            <nav>
+                                <ul class="space-y-2">
+                                    <li><a href="#" class="hover:text-slate-300">Contact Us</a></li>
+                                    <li><a href="#" class="hover:text-slate-300">About Us</a></li>
+                                    <li><a href="#" class="hover:text-slate-300">Careers</a></li>
+                                    <li><a href="#" class="hover:text-slate-300">Flipkart Stories</a></li>
+                                    <li><a href="#" class="hover:text-slate-300">Press</a></li>
+                                    <li><a href="#" class="hover:text-slate-300">Corporate Information</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+
+                        <!-- Consumer Policy Section - Hidden on small screens, shown in accordion -->
+                        <div class="hidden lg:flex flex-col gap-4">
+                            <h3 class="font-semibold">
+                                <a href="#" class="hover:text-slate-300">CONSUMER POLICY</a>
+                            </h3>
+                            <nav>
+                                <ul class="space-y-2">
+                                    <li><a href="#" class="hover:text-slate-300">Contact Us</a></li>
+                                    <li><a href="#" class="hover:text-slate-300">About Us</a></li>
+                                    <li><a href="#" class="hover:text-slate-300">Careers</a></li>
+                                    <li><a href="#" class="hover:text-slate-300">Flipkart Stories</a></li>
+                                    <li><a href="#" class="hover:text-slate-300">Press</a></li>
+                                    <li><a href="#" class="hover:text-slate-300">Corporate Information</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+
+
+
+
+                    <!-- Mobile  Menu -->
+                    <div class="lg:hidden w-full mt-6 space-y-4">
+
+                        <details class="group">
+                            <summary
+                                class="flex justify-between items-center cursor-pointer list-none font-semibold p-2 border-b border-slate-700">
+                                ABOUT US
+                                <span class="transform group-open:rotate-180 transition-transform">
+                                    ▼
+                                </span>
+                            </summary>
+                            <nav class="mt-2 ml-4">
+                                <ul class="space-y-2">
+                                    <li><a href="#" class="hover:text-slate-300">Contact Us</a></li>
+                                    <li><a href="#" class="hover:text-slate-300">About Us</a></li>
+                                    <li><a href="#" class="hover:text-slate-300">Careers</a></li>
+                                    <li><a href="#" class="hover:text-slate-300">Flipkart Stories</a></li>
+                                    <li><a href="#" class="hover:text-slate-300">Press</a></li>
+                                    <li><a href="#" class="hover:text-slate-300">Corporate Information</a></li>
+                                </ul>
+                            </nav>
+                        </details>
+
+
+
+                        <details class="group">
+                            <summary
+                                class="flex justify-between items-center cursor-pointer list-none font-semibold p-2 border-b border-slate-700">
+                                GROUP COMPANIES
+                                <span class="transform group-open:rotate-180 transition-transform">
+                                    ▼
+                                </span>
+                            </summary>
+                            <nav class="mt-2 ml-4">
+                                <ul class="space-y-2">
+                                    <li><a href="#" class="hover:text-slate-300">Contact Us</a></li>
+                                    <li><a href="#" class="hover:text-slate-300">About Us</a></li>
+                                    <li><a href="#" class="hover:text-slate-300">Careers</a></li>
+                                    <li><a href="#" class="hover:text-slate-300">Flipkart Stories</a></li>
+                                    <li><a href="#" class="hover:text-slate-300">Press</a></li>
+                                    <li><a href="#" class="hover:text-slate-300">Corporate Information</a></li>
+                                </ul>
+                            </nav>
+                        </details>
+
+
+
+
+                        <details class="group">
+                            <summary
+                                class="flex justify-between items-center cursor-pointer list-none font-semibold p-2 border-b border-slate-700">
+                                HELP
+                                <span class="transform group-open:rotate-180 transition-transform">
+                                    ▼
+                                </span>
+                            </summary>
+                            <nav class="mt-2 ml-4">
+                                <ul class="space-y-2">
+                                    <li><a href="#" class="hover:text-slate-300">Contact Us</a></li>
+                                    <li><a href="#" class="hover:text-slate-300">About Us</a></li>
+                                    <li><a href="#" class="hover:text-slate-300">Careers</a></li>
+                                    <li><a href="#" class="hover:text-slate-300">Flipkart Stories</a></li>
+                                    <li><a href="#" class="hover:text-slate-300">Press</a></li>
+                                    <li><a href="#" class="hover:text-slate-300">Corporate Information</a></li>
+                                </ul>
+                            </nav>
+                        </details>
+
+
+
+
+                        <details class="group">
+                            <summary
+                                class="flex justify-between items-center cursor-pointer list-none font-semibold p-2 border-b border-slate-700">
+                                CONSUMER POLICY
+                                <span class="transform group-open:rotate-180 transition-transform">
+                                    ▼
+                                </span>
+                            </summary>
+                            <nav class="mt-2 ml-4">
+                                <ul class="space-y-2">
+                                    <li><a href="#" class="hover:text-slate-300">Contact Us</a></li>
+                                    <li><a href="#" class="hover:text-slate-300">About Us</a></li>
+                                    <li><a href="#" class="hover:text-slate-300">Careers</a></li>
+                                    <li><a href="#" class="hover:text-slate-300">Flipkart Stories</a></li>
+                                    <li><a href="#" class="hover:text-slate-300">Press</a></li>
+                                    <li><a href="#" class="hover:text-slate-300">Corporate Information</a></li>
+                                </ul>
+                            </nav>
+                        </details>
+
+
+                    </div>
+
+                    <!-- Right Section -->
+                    <div class="flex flex-col lg:flex-row gap-8 w-full lg:w-1/2 lg:pl-8 mt-6 lg:mt-0">
+                        <!-- Mail Us Section -->
+                        <div class="flex flex-col gap-4">
+                            <h3 class="font-semibold">Mail Us:</h3>
+                            <address class="not-italic text-sm lg:text-base">
+                                Flipkart Internet Private Limited,<br>
+                                Buildings Alyssa, Begonia &<br>
+                                Clove Embassy Tech Village,<br>
+                                Outer Ring Road, Devarabeesanahalli Village,<br>
+                                Bengaluru, 560103,<br>
+                                Karnataka, India
+                            </address>
+
+                            <!-- Social Media Links -->
+                            <div class="flex flex-col  gap-2 mt-4">
+                                <div>
+                                    <h4 class="font-semibold">Social:</h4>
+                                </div>
+                                <div class="flex gap-4">
+                                    <a href="#" class="hover:opacity-80">
+                                        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjUiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNSAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEyLjkzMzEgMjFDMTcuOTAzNyAyMSAyMS45MzMxIDE2Ljk3MDYgMjEuOTMzMSAxMkMyMS45MzMxIDcuMDI5NDQgMTcuOTAzNyAzIDEyLjkzMzEgM0M3Ljk2MjU0IDMgMy45MzMxMSA3LjAyOTQ0IDMuOTMzMTEgMTJDMy45MzMxMSAxNi45NzA2IDcuOTYyNTQgMjEgMTIuOTMzMSAyMVoiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMS41IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPHBhdGggZD0iTTE2LjY4MzEgOC4yNUgxNS4xODMxQzE0LjU4NjQgOC4yNSAxNC4wMTQxIDguNDg3MDUgMTMuNTkyMSA4LjkwOTAxQzEzLjE3MDIgOS4zMzA5NyAxMi45MzMxIDkuOTAzMjYgMTIuOTMzMSAxMC41VjIxIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjEuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+CjxwYXRoIGQ9Ik05LjkzMzExIDEzLjVIMTUuOTMzMSIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIxLjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgo8L3N2Zz4K"
+                                            alt="Social Media 1" class="w-6 h-6 ">
+                                    </a>
+                                    <a href="#" class="hover:opacity-80">
+                                        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgY2xpcC1wYXRoPSJ1cmwoI2NsaXAwXzE4M18yMCkiPgo8cGF0aCBkPSJNMTMuNTQzNiAxMC42MTc5TDIwLjA5NzEgM0gxOC41NDQxTDEyLjg1MzcgOS42MTQ0OEw4LjMwODg3IDNIMy4wNjY4OUw5LjkzOTY0IDEzLjAwMjNMMy4wNjY4OSAyMC45OTA4SDQuNjE5OTRMMTAuNjI5MSAxNC4wMDU2TDE1LjQyODggMjAuOTkwOEgyMC42NzA4TDEzLjU0MzIgMTAuNjE3OUgxMy41NDM2Wk0xMS40MTY1IDEzLjA5MDRMMTAuNzIwMiAxMi4wOTQ0TDUuMTc5NTMgNC4xNjkxMUg3LjU2NDkxTDEyLjAzNjMgMTAuNTY1MUwxMi43MzI2IDExLjU2MTFMMTguNTQ0OCAxOS44NzQ4SDE2LjE1OTVMMTEuNDE2NSAxMy4wOTA4VjEzLjA5MDRaIiBmaWxsPSJ3aGl0ZSIvPgo8L2c+CjxkZWZzPgo8Y2xpcFBhdGggaWQ9ImNsaXAwXzE4M18yMCI+CjxyZWN0IHg9IjMuMDY2ODkiIHk9IjMiIHdpZHRoPSIxNy42MDM5IiBoZWlnaHQ9IjE4IiByeD0iMC4yIiBmaWxsPSJ3aGl0ZSIvPgo8L2NsaXBQYXRoPgo8L2RlZnM+Cjwvc3ZnPgo="
+                                            alt="Social Media 2" class="w-6 h-6 ">
+                                    </a>
+                                    <a href="#" class="hover:opacity-80">
+                                        <img src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/YoutubeLogo_958b78.svg"
+                                            alt="Social Media 3" class="w-6 h-6 ">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Registered Office Address Section -->
+                        <div class="flex flex-col gap-4">
+                            <h3 class="font-semibold">Registered Office Address:</h3>
+                            <address class="not-italic text-sm lg:text-base">
+                                Flipkart Internet Private Limited,<br>
+                                Buildings Alyssa, Begonia &<br>
+                                Clove Embassy Tech Village,<br>
+                                Outer Ring Road, Devarabeesanahalli Village,<br>
+                                Bengaluru, 560103,<br>
+                                Karnataka, India<br>
+                                CIN: U51109KA2012PTC066107<br>
+                                Telephone: <a href="tel:044-45614700" class="hover:text-slate-300">044-45614700</a> /
+                                <a href="tel:044-67415800" class="hover:text-slate-300">044-67415800</a>
+                            </address>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+            <!-- footer Bottom -->
+
+            <div class="flex flex-wrap items-center justify-around gap-4  text-white">
+                <div class="flex gap-2 items-center">
+                    <div><img
+                            src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/help-centre-image-c4ace8.svg"
+                            alt="" class="w-4 h-4"></div>
+                    <div>
+                        <p>Become a Seller</p>
+                    </div>
+                </div>
+
+
+                <div class="flex gap-2 items-center">
+                    <div><img
+                            src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/advertise-image-866c0b.svg"
+                            alt="" class="w-4 h-4"></div>
+                    <div>
+                        <p>Advertise</p>
+                    </div>
+                </div>
+
+
+                <div class="flex gap-2 items-center">
+                    <div><img
+                            src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/gift-cards-image-d7ff24.svg"
+                            alt="" class="w-4 h-4"></div>
+                    <div>
+                        <p>Gift Cards</p>
+                    </div>
+                </div>
+
+
+
+                <div class="flex gap-2 items-center">
+                    <div><img
+                            src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/help-centre-image-c4ace8.svg"
+                            alt="" class="w-4 h-4"></div>
+                    <div>
+                        <p>Help Center</p>
+                    </div>
+                </div>
+
+
+                <div class="flex gap-2 items-center">
+                    <div>
+                        <p>© 2007-2025 Filpkart.com</p>
+                    </div>
+                </div>
+
+                <!-- payment apps images -->
+                <div class="flex gap-2">
+                    <div>
+                        <img src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/payment-method-c454fb.svg"
+                            alt="mastercard" class="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <script src="profile.js"></script>
+
+</body>
+
+</html>
